@@ -1,0 +1,77 @@
+NAME
+    Pod::WSDL::Method - Represents a method in Pod::WSDL (internal use only)
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+SYNOPSIS
+      use Pod::WSDL::Method;
+      my $m = new Pod::WSDL::Method(name => 'mySub', doc  => new Pod::WSDL::Doc($docStr), return => new Pod::WSDL::Return($retStr));
+
+DESCRIPTION
+    This module is used internally by Pod::WSDL. It is unlikely that you
+    have to interact directly with it. If that is the case, take a look at
+    the code, it is rather simple.
+
+METHODS
+  new
+    Instantiates a new Pod::WSDL::Method.
+
+  Parameters
+    *   name - name of the method, mandatory
+
+    *   doc - a Pod::WSDL::Doc object, can be ommitted, use method doc later
+
+    *   return - a Pod::WSDL::Return object, can be ommitted, use method
+        return later
+
+    *   params - ref to array of Pod::WSDL::Param objects, can be ommitted,
+        use addParam() later
+
+    *   faults - ref to array of Pod::WSDL::Fault objects, can be ommitted,
+        use addFault() later
+
+  addParam
+    Add a Pod::WSDL::Param object to Pod::WSDL::Method
+
+  addFault
+    Add a Pod::WSDL::Fault object to Pod::WSDL::Method
+
+  return
+    Set the Pod::WSDL::Return object for Pod::WSDL::Method
+
+  doc
+    Set the Pod::WSDL::Doc object for Pod::WSDL::Method
+
+EXTERNAL DEPENDENCIES
+      [none]
+
+EXAMPLES
+    see Pod::WSDL
+
+BUGS
+    see Pod::WSDL
+
+TODO
+    see Pod::WSDL
+
+SEE ALSO
+      Pod::WSDL :-)
+ 
+AUTHOR
+    Tarek Ahmed, <luke.lubbock -the character every email address contains-
+    gmx.net>
+
+COPYRIGHT AND LICENSE
+    Copyright (C) 2005 by Tarek Ahmed
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself, either Perl version 5.8.5 or, at
+    your option, any later version of Perl 5 you may have available.
+
